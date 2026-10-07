@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SubletMate - Find a Sublet</title>
+    <meta name="description" content="Browse verified sublets and find accommodation that matches your needs and budget." />
+    <meta name="keywords" content="sublets, apartments, accommodation, verified sublets" />
+    <meta name="author" content="Yakir Pepo & Shir Shmerling" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" href="images/how-book.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <p class="siteName">SubletMate</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sublets.html">Find a Sublet</a></li>
+                <li><a href="howItWorks.html">How It Works</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav id="breadcrumbs">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Find a Sublet</li>
+            </ol>
+        </nav>
+        <div id="subletFinder">
+
+            <div class="finderForm">
+                <form>
+
+                    <label for="userName">What's your name?</label>
+                    <input type="text" id="userName" placeholder="Enter your name"
+                           oninput="checkForm(this.value, selectedCity)">
+
+                    <p class="formQuestion">Where would you like to stay?</p>
+
+                    <label class="radioLabel">
+                        <input type="radio" name="city" value="Tel Aviv"
+                               onclick="changeCity('Tel Aviv', 'images/sublet-tel-aviv.png')">
+                        Tel Aviv
+                    </label>
+
+                    <label class="radioLabel">
+                        <input type="radio" name="city" value="Jerusalem"
+                               onclick="changeCity('Jerusalem', 'images/sublet-jerusalem.png')">
+                        Jerusalem
+                    </label>
+
+                    <label class="radioLabel">
+                        <input type="radio" name="city" value="Haifa"
+                               onclick="changeCity('Haifa', 'images/sublet-haifa.png')">
+                        Haifa
+                    </label>
+
+                    <p class="formQuestion">What is important to you?</p>
+
+                    <label class="checkboxLabel">
+                        <input type="checkbox" value="Pet friendly"
+                               onclick="changeFeature(this, 'petImage')">
+                        Pet friendly
+                    </label>
+
+                    <label class="checkboxLabel">
+                        <input type="checkbox" value="Parking"
+                               onclick="changeFeature(this, 'parkingImage')">
+                        Parking
+                    </label>
+
+                    <label class="checkboxLabel">
+                        <input type="checkbox" value="Protected space"
+                               onclick="changeFeature(this, 'protectedImage')">
+                        Protected space
+                    </label>
+
+                    <input type="button" id="findButton"
+                           value="Find My Perfect Sublet"
+                           onclick="showResult()" disabled>
+                </form>
+            </div>
+
+            <div class="finderVisual">
+                <p id="chooseCityText">Choose a city to see your perfect sublet</p>
+                <p id="userNameDisplay"></p>
+
+                <img id="cityImage" src="" alt="" title="Selected sublet">
+
+                <img id="petImage" class="featureImage"
+                     src="images/pet friendly.png"
+                     alt="Dog representing a pet friendly sublet"
+                     title="Pet friendly">
+
+                <img id="parkingImage" class="featureImage"
+                     src="images/parking green car.png"
+                     alt="Car representing parking"
+                     title="Parking">
+
+                <img id="protectedImage" class="featureImage"
+                     src="images/protected space.png"
+                     alt="Shield representing protected space"
+                     title="Protected space">
+            </div>
+        </div>
+
+        <div id="resultPopup">
+            <div class="popupContent">
+                <button type="button" id="closePopup" onclick="closePopup()">×</button>
+                <h2>Your Perfect Sublet</h2>
+                <p id="popupText"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>SubletMate</p>
+    </footer>
+</div>
+</body>
+</html>

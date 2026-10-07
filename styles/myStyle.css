@@ -1,0 +1,881 @@
+﻿/* 1. הגדרות בסיס ופונטים גלובליים */
+
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+
+body {
+ direction: ltr;
+ font-family: 'Lato', 'Assistant', 'Arial', 'Times New Roman', sans-serif;
+ color: #1f2926;
+ background-color: #ffffff;
+ margin: 0;
+ padding: 0;
+ min-width: 1150px;
+}
+
+#container {
+ width: 100%;
+}
+
+.content-wrapper {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+
+
+/* 2. כותרת עליונה ותפריט ניווט */
+
+header {
+ width: 100%;
+ height: 80px;
+ background-color: #e6f7f3;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 8%;
+}
+
+header h1,
+header .siteName {
+ margin: 0;
+ font-size: 24px;
+ font-weight: bold;
+}
+
+nav {
+ margin: 0;
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+nav ul li a {
+ display: block;
+ padding: 28px 15px;
+ color: #1f2926;
+ text-decoration: none;
+}
+
+nav ul li a:hover {
+ color: #ffffff;
+ background-color: #00775b;
+}
+
+
+/* 3. תפריט פירורי לחם */
+
+#breadcrumbs {
+ width: 84%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding-top: 25px;
+}
+
+#breadcrumbs ol {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+}
+
+#breadcrumbs ol li {
+ display: inline-block;
+ margin-right: 8px;
+}
+
+#breadcrumbs ol li:after {
+ content: ">";
+ margin-left: 8px;
+}
+
+#breadcrumbs ol li:last-child:after {
+ content: "";
+}
+
+#breadcrumbs a {
+ color: #00775b;
+ text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+ text-decoration: underline;
+}
+
+
+/* 4. אזורי דף הבית */
+
+#opening,
+#budget,
+#easySublet,
+#finalSearch {
+ width: 100%;
+ overflow: hidden;
+}
+
+#opening {
+ min-height: 560px;
+ background-color: #e6f7f3;
+ padding-bottom: 40px;
+}
+
+#budget {
+ min-height: 620px;
+ background-color: #e8f6f3;
+ padding-bottom: 60px;
+}
+
+#easySublet {
+ min-height: 500px;
+ background-color: #ffffff;
+ padding-bottom: 40px;
+}
+
+#finalSearch {
+ min-height: 520px;
+ background-color: #ffffff;
+ padding-bottom: 40px;
+}
+
+
+/* 5. דף הבית: אזור פתיח */
+
+.openingText,
+.easyText {
+ float: left;
+ width: 40%;
+ margin-left: 8%;
+}
+
+.openingText {
+ padding-top: 70px;
+}
+
+.easyText {
+ padding-top: 130px;
+}
+
+.openingText h2 {
+ font-size: 48px;
+ line-height: 110%;
+ font-weight: bold;
+ margin-bottom: 30px;
+}
+
+.openingText p {
+ font-size: 18px;
+ line-height: 150%;
+ margin-bottom: 25px;
+}
+
+.openingText strong,
+.budgetText strong {
+ font-weight: bold;
+}
+
+.openingImage {
+ float: right;
+ width: 40%;
+ margin-right: 8%;
+ padding-top: 35px;
+}
+
+.openingImage img {
+ width: 100%;
+ max-width: 620px;
+}
+
+
+/* 6. דף הבית: חוות דעת */
+
+#testimonials {
+ width: 100%;
+ max-width: 1200px;
+ min-height: 380px;
+ margin: 0 auto;
+ padding: 50px 20px 30px;
+ text-align: center;
+ background-color: #ffffff;
+}
+
+#testimonials article {
+ display: inline-block;
+ height: 250px;
+ width: 31%;
+ margin: 0 1%;
+ text-align: left;
+ vertical-align: top;
+ border-radius: 16px;
+ border: 1px solid #003527;
+ overflow: hidden;
+ position: relative;
+}
+
+#testimonials article img {
+ position: absolute;
+ bottom: 0;
+ left: 14px;
+ width: 40%;
+ height: auto;
+ max-height: 100%;
+ display: block;
+}
+
+#testimonials article:first-child img {
+ transform: scale(1.15);
+ transform-origin: bottom center;
+}
+
+.testimonialText {
+ float: right;
+ width: 46%;
+ margin-right: 4%;
+ padding-top: 25px;
+ position: relative;
+}
+
+.testimonialText h2 {
+ font-size: 20px;
+ font-weight: bold;
+ margin-bottom: 12px;
+}
+
+.testimonialText p {
+ font-size: 14px;
+ line-height: 140%;
+ color: #4a5552;
+}
+
+
+/* 7. דף הבית: חיסכון, קלות וחיפוש */
+
+.budgetImage {
+ float: left;
+ width: 35%;
+ margin-left: 8%;
+ padding-top: 60px;
+ text-align: center;
+}
+
+.budgetImage img {
+ width: 100%;
+ max-width: 427px;
+}
+
+.budgetText {
+ float: right;
+ width: 42%;
+ margin-right: 8%;
+ padding-top: 75px;
+}
+
+.finalText {
+ float: left;
+ width: 45%;
+ margin-left: 8%;
+ padding-top: 80px;
+}
+
+.budgetText h2,
+.easyText h2,
+.finalText h2 {
+ font-size: 34px;
+ line-height: 120%;
+ font-weight: bold;
+}
+
+.budgetText h2 {
+ margin-bottom: 30px;
+}
+
+.easyText h2,
+.finalText h2 {
+ margin-bottom: 25px;
+}
+
+.budgetText h2 span,
+.easyText h2 span,
+.finalText h2 span {
+ color: #00775b;
+}
+
+.budgetText p {
+ font-size: 16px;
+ line-height: 145%;
+ margin-bottom: 20px;
+}
+
+.easyText p {
+ font-size: 16px;
+ margin-bottom: 30px;
+}
+
+.finalText h3 {
+ font-size: 22px;
+ margin-bottom: 25px;
+}
+
+.finalText p {
+ width: 90%;
+ font-size: 16px;
+ line-height: 145%;
+ margin-bottom: 30px;
+}
+
+.easyImage,
+.finalImage {
+ float: right;
+ width: 38%;
+ margin-right: 8%;
+ padding-top: 60px;
+ text-align: center;
+}
+
+.easyImage img,
+.finalImage img {
+ width: 100%;
+}
+
+.easyImage img {
+ max-width: 448px;
+}
+
+.finalImage img {
+ max-width: 470px;
+}
+
+
+/* 8. כפתורי דף הבית */
+
+.openingText a,
+.budgetText a,
+.easyText a,
+.finalText a,
+.howCallToAction a {
+ display: inline-block;
+ color: #ffffff;
+ background-color: #00775b;
+ text-decoration: none;
+ font-weight: bold;
+ border-radius: 10px;
+}
+
+.openingText a,
+.budgetText a,
+.easyText a,
+.finalText a {
+ padding: 18px 35px;
+}
+
+.howCallToAction a {
+ padding: 15px 30px;
+}
+
+.openingText a:hover,
+.budgetText a:hover,
+.easyText a:hover,
+.finalText a:hover,
+.howCallToAction a:hover,
+#contactForm input:last-child:hover {
+ background-color: #005f49;
+}
+
+
+/* 9. מבנה עמודים פנימיים */
+
+#aboutPage,
+#subletsPage,
+#howPage,
+#contactPage,
+#faqPage,
+#siteMapPage {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding-top: 35px;
+ padding-bottom: 40px;
+}
+
+#aboutPage,
+#contactPage {
+ min-height: 900px;
+}
+
+#subletsPage,
+#howPage {
+ min-height: 760px;
+}
+
+#siteMapPage {
+ min-height: 500px;
+}
+
+#subletsPage {
+ overflow: hidden;
+}
+
+#howPage {
+ text-align: center;
+}
+
+#faqPage {
+ padding-bottom: 50px;
+}
+
+#aboutPage h1,
+#subletsPage h1,
+#howPage h1,
+#contactPage h1,
+#faqPage h1,
+#siteMapPage h1 {
+ font-size: 42px;
+ font-weight: bold;
+ margin-bottom: 15px;
+}
+
+#aboutPage h1 {
+ margin-bottom: 30px;
+}
+
+#subletsPage .pageIntroduction,
+#howPage .pageIntroduction,
+#contactPage .pageIntroduction,
+#faqPage .pageIntroduction,
+#siteMapPage .pageIntroduction {
+ font-size: 18px;
+}
+
+#subletsPage .pageIntroduction,
+#howPage .pageIntroduction {
+ margin-bottom: 35px;
+}
+
+#contactPage .pageIntroduction,
+#faqPage .pageIntroduction,
+#siteMapPage .pageIntroduction {
+ margin-bottom: 30px;
+}
+
+
+/* 10. עמוד אודות */
+
+#aboutPage h2 {
+ font-size: 24px;
+ font-weight: bold;
+ margin-top: 30px;
+ margin-bottom: 15px;
+}
+
+#aboutPage p {
+ font-size: 16px;
+ line-height: 150%;
+ margin-bottom: 20px;
+}
+
+#aboutPage ul {
+ list-style-type: disc;
+ margin-left: 25px;
+ margin-bottom: 25px;
+}
+
+#aboutPage ul li {
+ margin-bottom: 10px;
+}
+
+#aboutPage a {
+ color: #00775b;
+}
+
+.hitLogo {
+ width: 180px;
+ margin-top: 5px;
+}
+
+
+/* 11. עמוד סאבלטים */
+
+#subletFinder {
+ width: 100%;
+ max-width: 1200px;
+ margin: 35px auto 50px;
+ overflow: hidden;
+}
+
+.finderForm,
+.finderVisual {
+ height: 520px;
+ border: 1px solid #003527;
+ border-radius: 16px;
+}
+
+.finderForm {
+ float: left;
+ width: 34%;
+ padding: 30px;
+}
+
+.finderVisual {
+ float: right;
+ width: 60%;
+ position: relative;
+ overflow: hidden;
+}
+
+.finderForm label {
+ display: block;
+ margin-bottom: 10px;
+}
+
+.finderForm #userName {
+ width: 94%;
+ padding: 12px;
+ margin-bottom: 25px;
+ border: 1px solid #003527;
+ border-radius: 8px;
+ font-family: 'Lato', 'Assistant', Arial, sans-serif;
+ font-size: 15px;
+}
+
+.finderForm .formQuestion {
+ font-size: 18px;
+ font-weight: bold;
+ margin-top: 20px;
+ margin-bottom: 15px;
+}
+
+.finderForm .radioLabel,
+.finderForm .checkboxLabel {
+ font-weight: normal;
+}
+
+.finderForm .radioLabel input,
+.finderForm .checkboxLabel input {
+ width: auto;
+ margin-right: 8px;
+}
+
+#findButton {
+ margin-top: 25px;
+ padding: 15px 25px;
+ border: none;
+ border-radius: 10px;
+ background-color: #00775b;
+ color: #ffffff;
+ font-family: 'Lato', 'Assistant', Arial, sans-serif;
+ font-size: 16px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+#findButton:disabled {
+ background-color: #b8cbc7;
+ cursor: default;
+}
+
+#chooseCityText {
+ width: 100%;
+ padding-top: 240px;
+ text-align: center;
+ font-size: 18px;
+ font-weight: bold;
+}
+
+/* שם המשתמש שמופיע על גבי התצוגה */
+#userNameDisplay {
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ padding: 10px 15px;
+ background-color: #e6f7f3;
+ border: 1px solid #003527;
+ border-radius: 8px;
+ font-size: 18px;
+ font-weight: bold;
+ z-index: 3;
+}
+
+#cityImage {
+ width: 100%;
+ height: 100%;
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ object-fit: cover;
+ object-position: center;
+ z-index: 1;
+}
+
+.featureImage {
+ position: absolute;
+ opacity: 0.6;
+ z-index: 2;
+}
+
+#petImage {
+ width: 23%;
+ left: 10%;
+ bottom: 5%;
+}
+
+#parkingImage {
+ width: 30%;
+ right: 5%;
+ bottom: 5%;
+}
+
+#protectedImage {
+ width: 12%;
+ right: 5%;
+ top: 5%;
+}
+
+
+/* 12. פופ אפ */
+
+#resultPopup {
+ width: 100%;
+ height: 100%;
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 10;
+}
+
+.popupContent {
+ width: 420px;
+ padding: 30px;
+ margin: 180px auto;
+ position: relative;
+ background-color: #e6f7f3;
+ border: 1px solid #003527;
+ border-radius: 16px;
+ text-align: center;
+}
+
+.popupContent h2 {
+ margin-bottom: 20px;
+}
+
+#popupText {
+ line-height: 1.8;
+}
+
+#closePopup {
+ position: absolute;
+ top: 10px;
+ right: 15px;
+ border: none;
+ background: none;
+ font-size: 24px;
+ cursor: pointer;
+}
+
+
+/* 13. עמוד שלבי השימוש */
+
+.howStep {
+ display: inline-block;
+ width: 31%;
+ height: 300px;
+ margin: 0 1%;
+ padding-top: 30px;
+ border-radius: 16px;
+ border: 1px solid #003527;
+ text-align: center;
+ vertical-align: top;
+}
+
+.howStep img {
+ width: 110px;
+ margin-bottom: 25px;
+}
+
+.howStepText {
+ width: 84%;
+ margin: 0 auto;
+}
+
+.howStepText h2 {
+ font-size: 22px;
+ font-weight: bold;
+ margin-bottom: 18px;
+}
+
+.howStepText p {
+ font-size: 15px;
+ line-height: 140%;
+}
+
+.howCallToAction {
+ width: 100%;
+ padding-top: 45px;
+ text-align: center;
+}
+
+.howCallToAction h2 {
+ font-size: 28px;
+ font-weight: bold;
+ margin-bottom: 15px;
+}
+
+.howCallToAction p {
+ font-size: 16px;
+ margin-bottom: 25px;
+}
+
+
+/* 14. עמוד יצירת קשר */
+
+#contactForm {
+ width: 50%;
+ margin: 0 auto;
+ padding: 30px;
+ border: 1px solid #003527;
+ border-radius: 16px;
+}
+
+#contactForm label {
+ display: block;
+ font-weight: bold;
+ margin-bottom: 8px;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+ width: 100%;
+ padding: 12px;
+ margin-bottom: 20px;
+ border: 1px solid #b8cbc7;
+ font-family: 'Lato', 'Assistant', Arial, 'Times New Roman', sans-serif;
+ font-size: 15px;
+ border-radius: 8px;
+}
+
+#contactForm .formQuestion {
+ font-weight: bold;
+ margin-bottom: 12px;
+}
+
+#contactForm .radioLabel,
+#contactForm .checkboxLabel {
+ font-weight: normal;
+ margin-bottom: 10px;
+}
+
+#contactForm .radioLabel input,
+#contactForm .checkboxLabel input {
+ display: inline;
+ width: auto;
+ padding: 0;
+ margin: 0 8px 0 0;
+}
+
+#contactForm .checkboxLabel {
+ margin-top: 5px;
+ margin-bottom: 20px;
+}
+
+#contactForm input:last-child {
+ width: auto;
+ padding: 15px 30px;
+ color: #ffffff;
+ background-color: #00775b;
+ border: none;
+ border-radius: 10px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+
+/* 15. עמוד שאלות נפוצות */
+
+.faqItem {
+ width: 80%;
+ margin: 0 auto 20px;
+ padding: 20px;
+ border: 1px solid #003527;
+}
+
+.faqItem h2 {
+ font-size: 22px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.faqItem p {
+ font-size: 16px;
+ line-height: 150%;
+}
+
+.faqItem a {
+ color: #00775b;
+}
+
+.faqItem a:hover {
+ text-decoration: underline;
+}
+
+
+/* 16. עמוד מפת האתר */
+
+.siteMapList {
+ width: 50%;
+ padding: 25px;
+ border: 1px solid #003527;
+ border-radius: 16px;
+ list-style-type: none;
+}
+
+.siteMapList > li > a {
+ font-size: 22px;
+ font-weight: bold;
+}
+
+.siteMapList ul {
+ list-style-type: disc;
+ margin-top: 20px;
+ margin-left: 30px;
+}
+
+.siteMapList ul li {
+ margin-bottom: 15px;
+}
+
+.siteMapList ul ul {
+ list-style-type: circle;
+ margin-top: 15px;
+}
+
+.siteMapList a {
+ color: #00775b;
+ text-decoration: none;
+}
+
+.siteMapList a:hover {
+ text-decoration: underline;
+}
+
+
+/* 17. פוטר */
+
+footer {
+ width: 100%;
+ height: 80px;
+ background-color: #00775b;
+ color: #ffffff;
+ text-align: center;
+}
+
+footer p {
+ padding-top: 30px;
+ font-size: 18px;
+ font-weight: bold;
+}
