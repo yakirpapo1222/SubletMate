@@ -29,7 +29,7 @@ function checkForm(name, city) {
         // אם המשתמש הזין שם ובחר עיר, הכפתור יהיה פעיל
     // הצגת שם המשתמש באזור התצוגה
     document.getElementById("userNameDisplay").innerHTML = name;
-        document.getElementById("findButton").disabled = name === "" || city === "";
+    document.getElementById("findButton").disabled = name.trim() === "" || city === "";
 }
 
 

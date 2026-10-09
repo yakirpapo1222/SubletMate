@@ -433,16 +433,13 @@ nav ul li a:hover {
  overflow: hidden;
 }
 
-#howPage {
- text-align: center;
-}
 
 #faqPage {
  padding-bottom: 50px;
 }
 
 #aboutPage h1,
-#subletsPage h1,
+#subletFinder h1,
 #howPage h1,
 #contactPage h1,
 #faqPage h1,
